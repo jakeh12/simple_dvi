@@ -84,20 +84,17 @@ module top (
   wire w_ig_de, w_ig_hs, w_ig_vs;
   wire w_ig_pix;
   
-  image_generator ig_0 (
+  frame_buffer ig_0 (
     .i_clk  (w_pxlclk),
     .i_rstn (w_rstn),
     .i_de   (w_de),
     .i_hs   (w_hs),
     .i_vs   (w_vs),
-    .i_x    (w_x),
-    .i_y    (w_y),
     .o_de   (w_ig_de),
     .o_hs   (w_ig_hs),
     .o_vs   (w_ig_vs),
     .o_pix  (w_ig_pix)
   );
-  
 
   wire [9:0] w_encoder_data;
 
